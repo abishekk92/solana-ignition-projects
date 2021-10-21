@@ -9,7 +9,7 @@ def parse_project(project_html):
     image = project_html.select_one("img.software_thumbnail_image")["src"]
     url = project_html.select_one("a.link-to-software")["href"]
     hearts = project_html.select_one("span.like-count").text.strip()
-    return {"tagline" : tagline, "name": name, "image" : image, "url" : url, "hearts": int(hearts)}
+    return {"Description" : tagline, "Project": name, "image_url" : image, "Project URL" : url, "Community Likes": int(hearts)}
 
 all_data = []
 for file_name in iglob("data/*.html"):
@@ -17,5 +17,5 @@ for file_name in iglob("data/*.html"):
     projects = document.select("div.gallery-item")
     all_data += list(map(parse_project, projects))
 
-df = pd.DataFrame(all_data)
+df = pd.DataFrame(all_data).drop_duplicates(subset=['Project'], keep=False)
 df.to_csv("all_projects.csv", index=False)
