@@ -17,5 +17,5 @@ for file_name in iglob("data/*.html"):
     projects = document.select("div.gallery-item")
     all_data += list(map(parse_project, projects))
 
-df = pd.DataFrame(all_data).drop_duplicates(subset=['Project'], keep=False)
+df = pd.DataFrame(all_data).drop_duplicates(subset=['Project'], keep='first')
 df.to_csv("all_projects.csv", index=False)

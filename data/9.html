@@ -15,7 +15,7 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"f9082fa052","applicationID":"7341974","transactionName":"IQpdERFeXFVVRhpQDAMJXwANVlVKH0dAUQkLFkAMDF9DFllaUVYc","queueTime":1,"applicationTime":290,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"f9082fa052","applicationID":"7341974","transactionName":"IQpdERFeXFVVRhpQDAMJXwANVlVKH0dAUQkLFkAMDF9DFllaUVYc","queueTime":1,"applicationTime":860,"agent":""}</script>
 <script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam-cell.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"f9082fa052",applicationID:"7341974"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[u.now()].concat(f(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(8),f=t(9),c=t("ee").get("tracer"),u=t("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(t,e){s[e]=i(p+e,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),t,n],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(l+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){function r(){return f.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,f=t(10);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],4:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],5:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof m&&!g){var e=Math.round(t.timeStamp),n={type:t.type};e<=p.now()?n.fid=p.now()-e:e>p.offset&&e<=Date.now()?(e-=p.offset,n.fid=p.now()-e):e=p.now(),g=!0,d("timing",["fi",e,n])}}function f(t){"hidden"===t&&d("pageHide",[p.now()])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var c,u,s,d=t("handle"),p=t("loader"),l=t(7),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){c=new PerformanceObserver(r);try{c.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,h=["click","keydown","mousedown","pointerdown","touchstart"];h.forEach(function(t){document.addEventListener(t,a,!1)})}l(f)}},{}],6:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],7:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],8:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],9:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],10:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,c,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var f=e(i),c=v(n),u=c.length,s=0;s<u;s++)c[s].apply(f,r);var p=d[w[n]];return p&&p.push([b,n,r,f]),f}}function o(t,e){y[t]=v(t).concat(e)}function m(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function v(t){return y[t]||[]}function g(t){return p[t]=p[t]||i(n)}function h(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var y={},w={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:e,buffer:h,abort:f,aborted:!1};return b}function o(t){return u(t,c,a)}function a(){return new r}function f(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var c="nr@context",u=t("gos"),s=t(8),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!R++){var t=M.info=NREUM.info,e=v.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();c(E,function(e,n){t[e]||(t[e]=n)});var n=a();f("mark",["onload",n+M.offset],null,"api"),f("timing",["load",n]);var r=v.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===v.readyState&&o()}function o(){f("mark",["domContent",a()+M.offset],null,"api")}var a=t(3),f=t("handle"),c=t(8),u=t("ee"),s=t(6),d=t(4),p=t(2),l=p.getConfiguration("ssl")===!1?"http":"https",m=window,v=m.document,g="addEventListener",h="attachEvent",y=m.XMLHttpRequest,w=y&&y.prototype,b=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:y,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,E={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1211.min.js"},O=y&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),M=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(5),v[g]?(v[g]("DOMContentLoaded",o,!1),m[g]("load",r,!1)):(v[h]("onreadystatechange",i),m[h]("onload",r)),f("mark",["firstbyte",a.getLastTimestamp()],null,"api");var R=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,c],s],t)}f(n+"start",[o,a,c],s,u);try{return p=e.apply(a,o)}catch(m){throw f(n+"err",[o,a,m],s,u),m}finally{f(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var f,c,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)c=e[u],f=t[c],a(f)||(t[c]=n(f,s?c+r:r,i,c,o))}function f(n,r,o,a){if(!m||e){var f=m;m=!0;try{t.emit(n,r,o,e,a)}catch(c){i([c,n,r,o],t)}m=f}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function f(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function c(t,e,n){var r=t[e];t[e]=f(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(9),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;e.exports=r,e.exports.wrapFunction=f,e.exports.wrapInPlace=c,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
     <title>IGNITION | A Global Solana Hackathon: Launching the next wave of crypto apps and infrastructure - Devpost</title>
 
@@ -69,7 +69,7 @@
 <meta name="twitter:domain" content="devpost.com" />
 
     <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="ygrkuuavRRw7iiDWbVjvWQ7q9iReQOuwIleVbH336l1DFGupLTxgkdS0aXNJAMkB0wJSSAM+gptKILnqehKtAw==" />
+<meta name="csrf-token" content="1oUElScJTzsv1sPiDYCt2LeZEHbv59U1c7kaW7QQJ6kN0lIKPYwKwwdSgjAk+2393AgXpEL19R0I1MM4wFp4Zw==" />
     
 
     
@@ -304,7 +304,7 @@
                 <li class="">
                   <a href="https://devpost.com/submit-to/13240-ignition-a-global-solana-hackathon/manage/submissions">My projects</a>
 </li>
-              <li class=""><a href="https://ignition.devpost.com/participants">Participants (5876)</a></li>
+              <li class=""><a href="https://ignition.devpost.com/participants">Participants (5879)</a></li>
 
               <li class=""><a href="https://ignition.devpost.com/resources">Resources</a></li>
 
@@ -479,174 +479,21 @@
 
           <div class="row">
       
-  <div class="large-4 small-12 columns gallery-item" data-software-id="379644">
-    <a class="block-wrapper-link fade link-to-software" href="https://devpost.com/software/collabnation">
-      <div class="software-entry gallery-entry fade visible" id="software_379644">
+  <div class="large-4 small-12 columns gallery-item" data-software-id="382270">
+    <a class="block-wrapper-link fade link-to-software" href="https://devpost.com/software/cruzo-first-nft-greeting-cards-marketplace">
+      <div class="software-entry gallery-entry fade visible" id="software_382270">
           <figure>
-            <img alt="Collabnation" class="software_thumbnail_image image-replacement" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif&#39;;" src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/705/954/datas/medium.jpeg" />
+            <img alt="CRUZO - First NFT Greeting Cards Marketplace" class="software_thumbnail_image image-replacement" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif&#39;;" src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_thumbnail_photos/001/656/310/datas/medium.png" />
             
             <figcaption>
               <div class="software-entry-name entry-body">
                 
                 <h5>
-                  Collabnation
+                  CRUZO - First NFT Greeting Cards Marketplace
                 </h5>
 
                 <p class="small tagline">
-                  We are here to make the matchmaking part easier for NFT creators with collabs!
-                </p>
-              </div>
-            </figcaption>
-          </figure>
-
-
-
-         <!-- cache end -->
-
-          <footer>
-            <div class="small members ">
-      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/hilariopedro18"><img alt="Hilario Pedro" class="user-photo gravatar_image image-replacement" title="hilariopedro18" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://www.gravatar.com/avatar/abf79ad639addb1cd926c8fdff6ad8c4?d=https%3A%2F%2Fdevpost-challengepost.netdna-ssl.com%2Fassets%2Fdefaults%2Fno-avatar-25.png&amp;s=25" /></span>
-      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/danielcullimore"><img alt="Daniel Cullimore" class="user-photo facebook_avatar_image image-replacement" title="danielcullimore" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://lh3.googleusercontent.com/a/AATXAJzAgFGxD-NMxZV0fUekXZdrgGx9m3P_kTA1cx8=s96-c?type=square" /></span>
-
-  
-</div>
-
-
-            <div class="counts">
-  <span class="count like-count" data-count="like">
-    <i class="ss-icon ss-heart"></i>
-    5
-  </span>
-
-  <span class="count comment-count" data-count="comment">
-    <i class="ss-icon ss-chat"></i>
-    2
-  </span>
-</div>
-
-          </footer>
-
-        
-</div></a>  </div>
-
-  <div class="large-4 small-12 columns gallery-item" data-software-id="387873">
-    <a class="block-wrapper-link fade link-to-software" href="https://devpost.com/software/convert-original-hand-illustrated-art-into-3d-digital-nft">
-      <div class="software-entry gallery-entry fade visible" id="software_387873">
-          <figure>
-            <img alt="Convert Original Hand Illustrated Art into 3D Digital NFT" class="software_thumbnail_image image-replacement" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif&#39;;" src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_thumbnail_photos/001/696/075/datas/medium.png" />
-            
-            <figcaption>
-              <div class="software-entry-name entry-body">
-                
-                <h5>
-                  Convert Original Hand Illustrated Art into 3D Digital NFT
-                </h5>
-
-                <p class="small tagline">
-                  Bridging the gap between traditional art and the digital world anchored by nature. My traditional hand illustrated botanical art done in ink on paper has been transformed piece by piece into 3D art.
-                </p>
-              </div>
-            </figcaption>
-          </figure>
-
-
-
-         <!-- cache end -->
-
-          <footer>
-            <div class="small members ">
-      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/katrina356"><img alt="Katrina Read" class="user-photo photo_image image-replacement" title="katrina356" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="//challengepost-s3-challengepost.netdna-ssl.com/photos/production/user_photos/001/695/517/datas/small.png" /></span>
-
-  
-</div>
-
-
-            <div class="counts">
-  <span class="count like-count" data-count="like">
-    <i class="ss-icon ss-heart"></i>
-    1
-  </span>
-
-  <span class="count comment-count" data-count="comment">
-    <i class="ss-icon ss-chat"></i>
-    1
-  </span>
-</div>
-
-          </footer>
-
-        
-</div></a>  </div>
-
-  <div class="large-4 small-12 columns gallery-item" data-software-id="387854">
-    <a class="block-wrapper-link fade link-to-software" href="https://devpost.com/software/cook-fight-go">
-      <div class="software-entry gallery-entry fade visible" id="software_387854">
-          <figure>
-            <img alt="Cook! Fight! Go! Solana animated film &amp; series." class="software_thumbnail_image image-replacement" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif&#39;;" src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_thumbnail_photos/001/690/870/datas/medium.jpg" />
-            
-            <figcaption>
-              <div class="software-entry-name entry-body">
-                
-                <h5>
-                  Cook! Fight! Go! Solana animated film &amp; series.
-                </h5>
-
-                <p class="small tagline">
-                  Cook! Fight! Go! Is a first of its kind animated project that brings to life an action packed film &amp; series that puts the Solana brand at the center of the show.
-                </p>
-              </div>
-            </figcaption>
-          </figure>
-
-
-
-         <!-- cache end -->
-
-          <footer>
-            <div class="small members ">
-      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/antoine631"><img alt="Antoine Herzog" class="user-photo facebook_avatar_image image-replacement" title="antoine631" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://lh3.googleusercontent.com/a/AATXAJzh3dFwSlekxR0Do2jO2eahRT9jM4_ZUsObNgjo=s96-c?type=square" /></span>
-      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/aemezu"><img alt="Tone E" class="user-photo facebook_avatar_image image-replacement" title="aemezu" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://lh3.googleusercontent.com/a-/AOh14Gjci-DgnFQnG-CvBegfYrq2ajaxMBRNXjZ8cSuUAw=s96-c?type=square" /></span>
-
-  
-</div>
-
-
-            <div class="counts">
-  <span class="count like-count" data-count="like">
-    <i class="ss-icon ss-heart"></i>
-    1
-  </span>
-
-  <span class="count comment-count" data-count="comment">
-    <i class="ss-icon ss-chat"></i>
-    0
-  </span>
-</div>
-
-          </footer>
-
-        
-</div></a>  </div>
-
-    <div class="columns"></div>
-  </div>
-  <div class="row">
-      
-  <div class="large-4 small-12 columns gallery-item" data-software-id="380888">
-    <a class="block-wrapper-link fade link-to-software" href="https://devpost.com/software/dogewalk">
-      <div class="software-entry gallery-entry fade visible" id="software_380888">
-          <figure>
-            <img alt="DogeCare" class="software_thumbnail_image image-replacement" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif&#39;;" src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_thumbnail_photos/001/705/536/datas/medium.png" />
-            
-            <figcaption>
-              <div class="software-entry-name entry-body">
-                
-                <h5>
-                  DogeCare
-                </h5>
-
-                <p class="small tagline">
-                  We are a community based, decentralised option to current pet sitting platforms which offer transparency and trust worthiness for pet sitters.
+                  Creators, users/seekers, collectors, and businesses can meet and interact (mint, sell, buy, send, gift, receive) with NFT digital content released in greeting cards. Join us! 
                 </p>
               </div>
             </figcaption>
@@ -658,225 +505,24 @@
 
           <footer>
             <div class="small members member-overflow">
-      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/angelobdavid"><img alt="angelo David" class="user-photo facebook_avatar_image image-replacement" title="angelobdavid" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://lh3.googleusercontent.com/a-/AOh14Ggfc6PIDNXihMbA5agNV1NWw2FFvMDZuEYsEiKW=s96-c?type=square" /></span>
-      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/tamgiatran"><img alt="Tam Tran" class="user-photo photo_image image-replacement" title="tamgiatran" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="//challengepost-s3-challengepost.netdna-ssl.com/photos/production/user_photos/001/652/900/datas/small.PNG" /></span>
-      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/mattdev001"><img alt="Matthew Galle" class="user-photo facebook_avatar_image image-replacement" title="mattdev001" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://lh3.googleusercontent.com/a/AATXAJxWkSkjq6cXAbE8rSQeJt5TvZgtD85z_O4qDyb5=s96-c?type=square" /></span>
-      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/kartik1998"><img alt="Kartik Rawat" class="user-photo facebook_avatar_image image-replacement" title="kartik1998" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://avatars.githubusercontent.com/u/22555088?type=square&amp;v=4" /></span>
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/modus77"><img alt="Denis Stepanov" class="user-photo facebook_avatar_image image-replacement" title="modus77" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://avatars.githubusercontent.com/u/81675301?type=square&amp;v=4" /></span>
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/bobrom27"><img alt="Roman Bobrik" class="user-photo facebook_avatar_image image-replacement" title="bobrom27" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://lh3.googleusercontent.com/a/AATXAJw9AmzmtgqpL4qsepQZgNSfztHhokeQlcycpyJs=s96-c?type=square" /></span>
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/incrypto32"><img alt="Krishnanand V P" class="user-photo facebook_avatar_image image-replacement" title="incrypto32" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://avatars.githubusercontent.com/u/44740264?type=square&amp;v=4" /></span>
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/PeacefulWarrior"><img alt="Anshul Goel" class="user-photo facebook_avatar_image image-replacement" title="PeacefulWarrior" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://lh3.googleusercontent.com/a-/AOh14GgKeByqzAvYWzs2gvZAI536rxriBzPcHInGkL6h2CQ=s96-c?type=square" /></span>
 
-  + 2
+  + 1
 </div>
 
 
             <div class="counts">
   <span class="count like-count" data-count="like">
     <i class="ss-icon ss-heart"></i>
+    32
+  </span>
+
+  <span class="count comment-count" data-count="comment">
+    <i class="ss-icon ss-chat"></i>
     12
-  </span>
-
-  <span class="count comment-count" data-count="comment">
-    <i class="ss-icon ss-chat"></i>
-    0
-  </span>
-</div>
-
-          </footer>
-
-        
-</div></a>  </div>
-
-  <div class="large-4 small-12 columns gallery-item" data-software-id="393043">
-    <a class="block-wrapper-link fade link-to-software" href="https://devpost.com/software/dongo-pw7f8s">
-      <div class="software-entry gallery-entry fade visible" id="software_393043">
-          <figure>
-            <img alt="Dongo " class="software_thumbnail_image image-replacement" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif&#39;;" src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_thumbnail_photos/001/695/054/datas/medium.png" />
-            
-            <figcaption>
-              <div class="software-entry-name entry-body">
-                
-                <h5>
-                  Dongo 
-                </h5>
-
-                <p class="small tagline">
-                  Dongo is a score me game for students where they can play science adventures and win Solana tokens they can use to redeem redeem exclusive educational resources. 
-                </p>
-              </div>
-            </figcaption>
-          </figure>
-
-
-
-         <!-- cache end -->
-
-          <footer>
-            <div class="small members ">
-      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/patrickobumselu"><img alt="Patrick Obumselu" class="user-photo gravatar_image image-replacement" title="patrickobumselu" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://www.gravatar.com/avatar/ed31954a52a62bbb4fd794546f8cacef?d=https%3A%2F%2Fdevpost-challengepost.netdna-ssl.com%2Fassets%2Fdefaults%2Fno-avatar-25.png&amp;s=25" /></span>
-
-  
-</div>
-
-
-            <div class="counts">
-  <span class="count like-count" data-count="like">
-    <i class="ss-icon ss-heart"></i>
-    2
-  </span>
-
-  <span class="count comment-count" data-count="comment">
-    <i class="ss-icon ss-chat"></i>
-    0
-  </span>
-</div>
-
-          </footer>
-
-        
-</div></a>  </div>
-
-  <div class="large-4 small-12 columns gallery-item" data-software-id="392834">
-    <a class="block-wrapper-link fade link-to-software" href="https://devpost.com/software/dotgen-css-nft">
-      <div class="software-entry gallery-entry fade visible" id="software_392834">
-          <figure>
-            <img alt="DotGen.css NFT" class="software_thumbnail_image image-replacement" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif&#39;;" src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_thumbnail_photos/001/694/186/datas/medium.png" />
-            
-            <figcaption>
-              <div class="software-entry-name entry-body">
-                
-                <h5>
-                  DotGen.css NFT
-                </h5>
-
-                <p class="small tagline">
-                  https://bcrikko.github.io/css-collection/tool/dotgen/index.html
-Transform this project into NFT art with ledger owners.
-                </p>
-              </div>
-            </figcaption>
-          </figure>
-
-
-
-         <!-- cache end -->
-
-          <footer>
-            <div class="small members ">
-      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/salespaulo"><img alt="Paulo R. A. Sales" class="user-photo facebook_avatar_image image-replacement" title="salespaulo" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://avatars.githubusercontent.com/u/55711?type=square&amp;v=4" /></span>
-
-  
-</div>
-
-
-            <div class="counts">
-  <span class="count like-count" data-count="like">
-    <i class="ss-icon ss-heart"></i>
-    0
-  </span>
-
-  <span class="count comment-count" data-count="comment">
-    <i class="ss-icon ss-chat"></i>
-    0
-  </span>
-</div>
-
-          </footer>
-
-        
-</div></a>  </div>
-
-    <div class="columns"></div>
-  </div>
-  <div class="row">
-      
-  <div class="large-4 small-12 columns gallery-item" data-software-id="392394">
-    <a class="block-wrapper-link fade link-to-software" href="https://devpost.com/software/fort-2ur8cv">
-      <div class="software-entry gallery-entry fade visible" id="software_392394">
-          <figure>
-            <img alt="FORT" class="software_thumbnail_image image-replacement" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif&#39;;" src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/695/375/datas/medium.png" />
-            
-            <figcaption>
-              <div class="software-entry-name entry-body">
-                
-                <h5>
-                  FORT
-                </h5>
-
-                <p class="small tagline">
-                  A new paradigm of DeFi
-                </p>
-              </div>
-            </figcaption>
-          </figure>
-
-
-
-         <!-- cache end -->
-
-          <footer>
-            <div class="small members ">
-      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/heather-syt7"><img alt="依婷 沈" class="user-photo facebook_avatar_image image-replacement" title="heather-syt7" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://lh3.googleusercontent.com/a/AATXAJzlLOjnUguafzgINEsqLANpBRnjBZEBvFfoUZAv=s96-c?type=square" /></span>
-
-  
-</div>
-
-
-            <div class="counts">
-  <span class="count like-count" data-count="like">
-    <i class="ss-icon ss-heart"></i>
-    0
-  </span>
-
-  <span class="count comment-count" data-count="comment">
-    <i class="ss-icon ss-chat"></i>
-    0
-  </span>
-</div>
-
-          </footer>
-
-        
-</div></a>  </div>
-
-  <div class="large-4 small-12 columns gallery-item" data-software-id="388364">
-    <a class="block-wrapper-link fade link-to-software" href="https://devpost.com/software/golff-finance-4ncf6j">
-      <div class="software-entry gallery-entry fade visible" id="software_388364">
-          <figure>
-            <img alt="Golff Finance" class="software_thumbnail_image image-replacement" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif&#39;;" src="https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif" />
-            
-            <figcaption>
-              <div class="software-entry-name entry-body">
-                
-                <h5>
-                  Golff Finance
-                </h5>
-
-                <p class="small tagline">
-                  Golff Finance, DeFi Aggregator, committing to creating a light, open and free financial world!
-                </p>
-              </div>
-            </figcaption>
-          </figure>
-
-
-
-         <!-- cache end -->
-
-          <footer>
-            <div class="small members ">
-      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/dingyunpeng"><img alt="Yunpeng Ding" class="user-photo facebook_avatar_image image-replacement" title="dingyunpeng" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://media-exp1.licdn.com/dms/image/C4D03AQFxF7sin7MpIw/profile-displayphoto-shrink_800_800/0/1530388279681?e=1639008000&amp;t=rpw2G8r46fqskC3BdqolbynHlKObxSVGaYCNCi0DR8Q&amp;type=square&amp;v=beta" /></span>
-
-  
-</div>
-
-
-            <div class="counts">
-  <span class="count like-count" data-count="like">
-    <i class="ss-icon ss-heart"></i>
-    1
-  </span>
-
-  <span class="count comment-count" data-count="comment">
-    <i class="ss-icon ss-chat"></i>
-    0
   </span>
 </div>
 
@@ -889,7 +535,7 @@ Transform this project into NFT art with ledger owners.
     <a class="block-wrapper-link fade link-to-software" href="https://devpost.com/software/gonna-make-it">
       <div class="software-entry gallery-entry fade visible" id="software_382356">
           <figure>
-            <img alt="Gonna Make It" class="software_thumbnail_image image-replacement" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif&#39;;" src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/705/724/datas/medium.PNG" />
+            <img alt="Gonna Make It" class="software_thumbnail_image image-replacement" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif&#39;;" src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/706/872/datas/medium.PNG" />
             
             <figcaption>
               <div class="software-entry-name entry-body">
@@ -923,12 +569,64 @@ Transform this project into NFT art with ledger owners.
             <div class="counts">
   <span class="count like-count" data-count="like">
     <i class="ss-icon ss-heart"></i>
-    30
+    52
   </span>
 
   <span class="count comment-count" data-count="comment">
     <i class="ss-icon ss-chat"></i>
-    6
+    8
+  </span>
+</div>
+
+          </footer>
+
+        
+</div></a>  </div>
+
+  <div class="large-4 small-12 columns gallery-item" data-software-id="382412">
+    <a class="block-wrapper-link fade link-to-software" href="https://devpost.com/software/enifty">
+      <div class="software-entry gallery-entry fade visible" id="software_382412">
+          <figure>
+            <img alt="eNIFTY" class="software_thumbnail_image image-replacement" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif&#39;;" src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_thumbnail_photos/001/697/188/datas/medium.png" />
+            
+            <figcaption>
+              <div class="software-entry-name entry-body">
+                
+                <h5>
+                  eNIFTY
+                </h5>
+
+                <p class="small tagline">
+                  NFT Anything!
+                </p>
+              </div>
+            </figcaption>
+          </figure>
+
+
+
+         <!-- cache end -->
+
+          <footer>
+            <div class="small members ">
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/venkatash-sv"><img alt="Saravanan Venkateshwaran" class="user-photo photo_image image-replacement" title="venkatash-sv" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="//challengepost-s3-challengepost.netdna-ssl.com/photos/production/user_photos/001/360/201/datas/small.jpeg" /></span>
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/imsikki"><img alt="Shikshanshu Jha" class="user-photo facebook_avatar_image image-replacement" title="imsikki" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://lh3.googleusercontent.com/a-/AOh14Gh3BrEq0vhuJAvoAhOBOFTzUzO96__zue9SfWHxxQ?type=square" /></span>
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/karanjain140701"><img alt="Karan Jain" class="user-photo facebook_avatar_image image-replacement" title="karanjain140701" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://lh4.googleusercontent.com/--vxGuPGdG5Y/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuclYF_SfObkXWq4tQO2GQpufBlFoMA/s96-c/c/photo.jpg?type=square" /></span>
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/kshitij-arora"><img alt="Kshitij Arora" class="user-photo facebook_avatar_image image-replacement" title="kshitij-arora" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://avatars0.githubusercontent.com/u/57871425?type=square&amp;v=4" /></span>
+
+  
+</div>
+
+
+            <div class="counts">
+  <span class="count like-count" data-count="like">
+    <i class="ss-icon ss-heart"></i>
+    223
+  </span>
+
+  <span class="count comment-count" data-count="comment">
+    <i class="ss-icon ss-chat"></i>
+    32
   </span>
 </div>
 
@@ -941,21 +639,22 @@ Transform this project into NFT art with ledger owners.
   </div>
   <div class="row">
       
-  <div class="large-4 small-12 columns gallery-item" data-software-id="393683">
-    <a class="block-wrapper-link fade link-to-software" href="https://devpost.com/software/goobot">
-      <div class="software-entry gallery-entry fade visible" id="software_393683">
+  <div class="large-4 small-12 columns gallery-item" data-software-id="382619">
+    <a class="block-wrapper-link fade link-to-software" href="https://devpost.com/software/streamflow-finance">
+      <div class="software-entry gallery-entry fade visible" id="software_382619">
           <figure>
-            <img alt="GooBot" class="software_thumbnail_image image-replacement" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif&#39;;" src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_thumbnail_photos/001/697/164/datas/medium.jpg" />
+            <img alt="StreamFlow Finance" class="software_thumbnail_image image-replacement" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif&#39;;" src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/660/321/datas/medium.png" />
             
             <figcaption>
               <div class="software-entry-name entry-body">
                 
                 <h5>
-                  GooBot
+                  StreamFlow Finance
                 </h5>
 
                 <p class="small tagline">
-                  GooBot is a Telegram Bot that watches Solana wallets to notify users of important events, like receiving tokens and NFTs. GooBot is the alpha demo of Goo; a decentralized communications protocol.
+                  Platform for organizations to distribute value in decentralized, permissionless, trust-minimized, efficient, effective and straightforward way.
+Made of composable and mutually compatible tools.
                 </p>
               </div>
             </figcaption>
@@ -967,8 +666,9 @@ Transform this project into NFT art with ledger owners.
 
           <footer>
             <div class="small members ">
-      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/mail237"><img alt="Aaron Gillett" class="user-photo gravatar_image image-replacement" title="mail237" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://www.gravatar.com/avatar/4dea6d0c74b6d00f0dfbf053d09814a1?d=https%3A%2F%2Fdevpost-challengepost.netdna-ssl.com%2Fassets%2Fdefaults%2Fno-avatar-25.png&amp;s=25" /></span>
-      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/bitsushi"><img alt="John Rees" class="user-photo gravatar_image image-replacement" title="bitsushi" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://www.gravatar.com/avatar/2f68efbb14fd2acbabeb451fabcbe537?d=https%3A%2F%2Fdevpost-challengepost.netdna-ssl.com%2Fassets%2Fdefaults%2Fno-avatar-25.png&amp;s=25" /></span>
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/imprfekt"><img alt="imprfekt imprfekt" class="user-photo facebook_avatar_image image-replacement" title="imprfekt" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://avatars.githubusercontent.com/u/5047969?type=square&amp;v=4" /></span>
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/aborzanovic"><img alt="Aleksandar Borzanovic" class="user-photo facebook_avatar_image image-replacement" title="aborzanovic" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://avatars.githubusercontent.com/u/10115976?type=square&amp;v=4" /></span>
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/parazyd"><img alt="parazyd" class="user-photo facebook_avatar_image image-replacement" title="parazyd" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://avatars.githubusercontent.com/u/9220323?type=square&amp;v=4" /></span>
 
   
 </div>
@@ -977,7 +677,59 @@ Transform this project into NFT art with ledger owners.
             <div class="counts">
   <span class="count like-count" data-count="like">
     <i class="ss-icon ss-heart"></i>
-    0
+    364
+  </span>
+
+  <span class="count comment-count" data-count="comment">
+    <i class="ss-icon ss-chat"></i>
+    93
+  </span>
+</div>
+
+          </footer>
+
+        
+</div></a>  </div>
+
+  <div class="large-4 small-12 columns gallery-item" data-software-id="382838">
+    <a class="block-wrapper-link fade link-to-software" href="https://devpost.com/software/wgmi-nft-collector-s-club">
+      <div class="software-entry gallery-entry fade visible" id="software_382838">
+          <figure>
+            <img alt="WGMI NFT Collector&#39;s Club" class="software_thumbnail_image image-replacement" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif&#39;;" src="https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif" />
+            
+            <figcaption>
+              <div class="software-entry-name entry-body">
+                
+                <h5>
+                  WGMI NFT Collector&#39;s Club
+                </h5>
+
+                <p class="small tagline">
+                  Community-inspired generative NFTs, without the hassle. Mission: make it easy for individuals to access great art and to onboard great artists to Solana. WGMI Holders receive monthly NFT airdrops.
+
+
+                </p>
+              </div>
+            </figcaption>
+          </figure>
+
+
+
+         <!-- cache end -->
+
+          <footer>
+            <div class="small members ">
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/amilz"><img alt="Aaron Milano" class="user-photo facebook_avatar_image image-replacement" title="amilz" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://avatars.githubusercontent.com/u/85324096?type=square&amp;v=4" /></span>
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/austinmilt"><img alt="Austin Milt" class="user-photo facebook_avatar_image image-replacement" title="austinmilt" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://avatars.githubusercontent.com/u/1540936?type=square&amp;v=4" /></span>
+
+  
+</div>
+
+
+            <div class="counts">
+  <span class="count like-count" data-count="like">
+    <i class="ss-icon ss-heart"></i>
+    5
   </span>
 
   <span class="count comment-count" data-count="comment">
@@ -991,21 +743,21 @@ Transform this project into NFT art with ledger owners.
         
 </div></a>  </div>
 
-  <div class="large-4 small-12 columns gallery-item" data-software-id="388612">
-    <a class="block-wrapper-link fade link-to-software" href="https://devpost.com/software/goose-dealer">
-      <div class="software-entry gallery-entry fade visible" id="software_388612">
+  <div class="large-4 small-12 columns gallery-item" data-software-id="382966">
+    <a class="block-wrapper-link fade link-to-software" href="https://devpost.com/software/pangaea-cgwaqj">
+      <div class="software-entry gallery-entry fade visible" id="software_382966">
           <figure>
-            <img alt="Goose Dealer" class="software_thumbnail_image image-replacement" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif&#39;;" src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_thumbnail_photos/001/682/577/datas/medium.png" />
+            <img alt="Pangaea Protocol" class="software_thumbnail_image image-replacement" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif&#39;;" src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_thumbnail_photos/001/692/479/datas/medium.png" />
             
             <figcaption>
               <div class="software-entry-name entry-body">
                 
                 <h5>
-                  Goose Dealer
+                  Pangaea Protocol
                 </h5>
 
                 <p class="small tagline">
-                  🤝   Peer-to-peer NFT sales app
+                  Accelerating data-centric AI through decentralized dataset generation and augmentation, powered by Solana.
                 </p>
               </div>
             </figcaption>
@@ -1017,7 +769,10 @@ Transform this project into NFT art with ledger owners.
 
           <footer>
             <div class="small members ">
-      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/jamandyjam"><img alt="Andy 801" class="user-photo photo_image image-replacement" title="jamandyjam" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="//challengepost-s3-challengepost.netdna-ssl.com/photos/production/user_photos/001/681/761/datas/small.png" /></span>
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/surfertas"><img alt="surfer tas" class="user-photo photo_image image-replacement" title="surfertas" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="//challengepost-s3-challengepost.netdna-ssl.com/photos/production/user_photos/001/719/020/datas/small.png" /></span>
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/ltirrell"><img alt="Lee Tirrell" class="user-photo photo_image image-replacement" title="ltirrell" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="//challengepost-s3-challengepost.netdna-ssl.com/photos/production/user_photos/001/682/072/datas/small.jpeg" /></span>
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/hsubra89"><img alt="Harish Subramanium" class="user-photo facebook_avatar_image image-replacement" title="hsubra89" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://avatars.githubusercontent.com/u/2698319?type=square&amp;v=4" /></span>
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/judyyang828"><img alt="Judy Yang" class="user-photo facebook_avatar_image image-replacement" title="judyyang828" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://lh3.googleusercontent.com/a-/AOh14GhMtnvlLckRqKP-5QHYNSzydg1kE4yCYFjuX-3U9g=s96-c?type=square" /></span>
 
   
 </div>
@@ -1026,7 +781,7 @@ Transform this project into NFT art with ledger owners.
             <div class="counts">
   <span class="count like-count" data-count="like">
     <i class="ss-icon ss-heart"></i>
-    2
+    15
   </span>
 
   <span class="count comment-count" data-count="comment">
@@ -1040,21 +795,25 @@ Transform this project into NFT art with ledger owners.
         
 </div></a>  </div>
 
-  <div class="large-4 small-12 columns gallery-item" data-software-id="377259">
-    <a class="block-wrapper-link fade link-to-software" href="https://devpost.com/software/hokusai-api">
-      <div class="software-entry gallery-entry fade visible" id="software_377259">
+    <div class="columns"></div>
+  </div>
+  <div class="row">
+      
+  <div class="large-4 small-12 columns gallery-item" data-software-id="383061">
+    <a class="block-wrapper-link fade link-to-software" href="https://devpost.com/software/dalgona-mint">
+      <div class="software-entry gallery-entry fade visible" id="software_383061">
           <figure>
-            <img alt="Hokusai API" class="software_thumbnail_image image-replacement" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif&#39;;" src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/642/230/datas/medium.png" />
+            <img alt="Dalgona Mint" class="software_thumbnail_image image-replacement" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif&#39;;" src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_thumbnail_photos/001/694/329/datas/medium.png" />
             
             <figcaption>
               <div class="software-entry-name entry-body">
                 
                 <h5>
-                  Hokusai API
+                  Dalgona Mint
                 </h5>
 
                 <p class="small tagline">
-                  Enables you to publish NFTs in any programming language on Solana. There is no need to write a contract.
+                  Dalgona Mint is a hybrid algorithmic stablecoin protocol denominated in any global currency. Users can mint various currency stablecoins with a single set of collateral.
                 </p>
               </div>
             </figcaption>
@@ -1066,24 +825,24 @@ Transform this project into NFT art with ledger owners.
 
           <footer>
             <div class="small members member-overflow">
-      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/yosui262"><img alt="Yosui Harasawa" class="user-photo facebook_avatar_image image-replacement" title="yosui262" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://media-exp1.licdn.com/dms/image/C5603AQE1OC52DpN7vw/profile-displayphoto-shrink_800_800/0/1618218044468?e=1635984000&amp;t=J8SFxqHRW-COWiptI03tV90yxeZIO_m0vX7V_Tkpn4k&amp;type=square&amp;v=beta" /></span>
-      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/wan-nyan-wan"><img alt="wan-nyan-wan" class="user-photo facebook_avatar_image image-replacement" title="wan-nyan-wan" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://avatars.githubusercontent.com/u/63966451?type=square&amp;v=4" /></span>
-      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/thanatly"><img alt="thanatly" class="user-photo facebook_avatar_image image-replacement" title="thanatly" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://avatars.githubusercontent.com/u/82842370?type=square&amp;v=4" /></span>
-      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/taryune"><img alt="Aki Tarumi" class="user-photo facebook_avatar_image image-replacement" title="taryune" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://avatars.githubusercontent.com/u/19934260?type=square&amp;v=4" /></span>
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/bombs-kim"><img alt="Beomsoo Kim" class="user-photo facebook_avatar_image image-replacement" title="bombs-kim" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://avatars.githubusercontent.com/u/11001573?type=square&amp;v=4" /></span>
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/pakchu"><img alt="pakchu cho" class="user-photo facebook_avatar_image image-replacement" title="pakchu" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://avatars.githubusercontent.com/u/83414365?type=square&amp;v=4" /></span>
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/raehyun-kim"><img alt="Ryan Kim" class="user-photo facebook_avatar_image image-replacement" title="raehyun-kim" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://lh3.googleusercontent.com/a-/AOh14GhvBMnyvTtEIuOanB5hWfamJiFqoqrSDgHg1o6g=s96-c?type=square" /></span>
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/hyunjin-kim"><img alt="Hyunjin Kim" class="user-photo facebook_avatar_image image-replacement" title="hyunjin-kim" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://lh3.googleusercontent.com/a/AATXAJzJrj6vtiSFNAlcxF6LuoJzCYaZBAQ3LL62whns=s96-c?type=square" /></span>
 
-  + 2
+  + 1
 </div>
 
 
             <div class="counts">
   <span class="count like-count" data-count="like">
     <i class="ss-icon ss-heart"></i>
-    1
+    29
   </span>
 
   <span class="count comment-count" data-count="comment">
     <i class="ss-icon ss-chat"></i>
-    0
+    5
   </span>
 </div>
 
@@ -1092,77 +851,21 @@ Transform this project into NFT art with ledger owners.
         
 </div></a>  </div>
 
-    <div class="columns"></div>
-  </div>
-  <div class="row">
-      
-  <div class="large-4 small-12 columns gallery-item" data-software-id="379147">
-    <a class="block-wrapper-link fade link-to-software" href="https://devpost.com/software/host3">
-      <div class="software-entry gallery-entry fade visible" id="software_379147">
+  <div class="large-4 small-12 columns gallery-item" data-software-id="383237">
+    <a class="block-wrapper-link fade link-to-software" href="https://devpost.com/software/nftswap">
+      <div class="software-entry gallery-entry fade visible" id="software_383237">
           <figure>
-            <img alt="HOST3 | AppFi markets on Solana" class="software_thumbnail_image image-replacement" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif&#39;;" src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/705/129/datas/medium.png" />
+            <img alt="NFTswap" class="software_thumbnail_image image-replacement" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif&#39;;" src="https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif" />
             
             <figcaption>
               <div class="software-entry-name entry-body">
                 
                 <h5>
-                  HOST3 | AppFi markets on Solana
+                  NFTswap
                 </h5>
 
                 <p class="small tagline">
-                  HOST3 is an upcoming web hosting service and DEX that aims to match the funding needs of developers with the risk money needs of investors by trading tokens to be used to pay for ads, subs, and bills.
-                </p>
-              </div>
-            </figcaption>
-          </figure>
-
-
-
-         <!-- cache end -->
-
-          <footer>
-            <div class="small members member-overflow">
-      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/fuyutarow"><img alt="fuyutarow FUKUDA Yutaro" class="user-photo facebook_avatar_image image-replacement" title="fuyutarow" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://avatars.githubusercontent.com/u/14998939?type=square&amp;v=4" /></span>
-      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/imataka7"><img alt="Takaya Imagawa" class="user-photo facebook_avatar_image image-replacement" title="imataka7" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://avatars.githubusercontent.com/u/49870939?type=square&amp;v=4" /></span>
-      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/munron"><img alt="Hideaki Murotani" class="user-photo photo_image image-replacement" title="munron" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="//challengepost-s3-challengepost.netdna-ssl.com/photos/production/user_photos/001/647/882/datas/small.jpg" /></span>
-      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/eri2490"><img alt="Eri Nishikura" class="user-photo facebook_avatar_image image-replacement" title="eri2490" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://avatars.githubusercontent.com/u/7513949?type=square&amp;v=4" /></span>
-
-  + 5
-</div>
-
-
-            <div class="counts">
-  <span class="count like-count" data-count="like">
-    <i class="ss-icon ss-heart"></i>
-    72
-  </span>
-
-  <span class="count comment-count" data-count="comment">
-    <i class="ss-icon ss-chat"></i>
-    30
-  </span>
-</div>
-
-          </footer>
-
-        
-</div></a>  </div>
-
-  <div class="large-4 small-12 columns gallery-item" data-software-id="392893">
-    <a class="block-wrapper-link fade link-to-software" href="https://devpost.com/software/iotoyou">
-      <div class="software-entry gallery-entry fade visible" id="software_392893">
-          <figure>
-            <img alt="IoToYou" class="software_thumbnail_image image-replacement" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif&#39;;" src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/694/520/datas/medium.png" />
-            
-            <figcaption>
-              <div class="software-entry-name entry-body">
-                
-                <h5>
-                  IoToYou
-                </h5>
-
-                <p class="small tagline">
-                  This project aims to create a IoT network coverage for one of the least densely populated and the most lone places in the world, Mongolia. This network dedicated to save hundreds of lives. 
+                  NFTswap is a brand new platform for trading your NFTs between users.
                 </p>
               </div>
             </figcaption>
@@ -1174,7 +877,10 @@ Transform this project into NFT art with ledger owners.
 
           <footer>
             <div class="small members ">
-      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/boldsaikhan"><img alt="Boldsaikhan Usukh" class="user-photo facebook_avatar_image image-replacement" title="boldsaikhan" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://lh3.googleusercontent.com/a-/AOh14Gir8-kXzkC7ZgYK2VWjHaZnU1HzddUSSJJ8Rluo3Fw=s96-c?type=square" /></span>
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/ponWeb"><img alt="Tim Web" class="user-photo photo_image image-replacement" title="ponWeb" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="//challengepost-s3-challengepost.netdna-ssl.com/photos/production/user_photos/001/692/484/datas/small.png" /></span>
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/l4kk3r"><img alt="Jack Berton" class="user-photo gravatar_image image-replacement" title="l4kk3r" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://www.gravatar.com/avatar/460d4d99cfe84e024d2e0ec8da4dbb74?d=https%3A%2F%2Fdevpost-challengepost.netdna-ssl.com%2Fassets%2Fdefaults%2Fno-avatar-25.png&amp;s=25" /></span>
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/timvaulin10"><img alt="Tim Vaulin" class="user-photo facebook_avatar_image image-replacement" title="timvaulin10" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://lh3.googleusercontent.com/a/AATXAJxAXqZ8ComQ4RSZSH53MwQWxA7-XzxyMx9xnX8E=s96-c?type=square" /></span>
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/marko710"><img alt="Marko Sabec" class="user-photo gravatar_image image-replacement" title="marko710" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://www.gravatar.com/avatar/3015bb402d22031c30b487a922f188c2?d=https%3A%2F%2Fdevpost-challengepost.netdna-ssl.com%2Fassets%2Fdefaults%2Fno-avatar-25.png&amp;s=25" /></span>
 
   
 </div>
@@ -1197,21 +903,21 @@ Transform this project into NFT art with ledger owners.
         
 </div></a>  </div>
 
-  <div class="large-4 small-12 columns gallery-item" data-software-id="388420">
-    <a class="block-wrapper-link fade link-to-software" href="https://devpost.com/software/iou-guru">
-      <div class="software-entry gallery-entry fade visible" id="software_388420">
+  <div class="large-4 small-12 columns gallery-item" data-software-id="383280">
+    <a class="block-wrapper-link fade link-to-software" href="https://devpost.com/software/buy-me-crypto">
+      <div class="software-entry gallery-entry fade visible" id="software_383280">
           <figure>
-            <img alt="IOU Guru" class="software_thumbnail_image image-replacement" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif&#39;;" src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_thumbnail_photos/001/681/972/datas/medium.png" />
+            <img alt="Buy Me Crypto" class="software_thumbnail_image image-replacement" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif&#39;;" src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_thumbnail_photos/001/694/518/datas/medium.png" />
             
             <figcaption>
               <div class="software-entry-name entry-body">
                 
                 <h5>
-                  IOU Guru
+                  Buy Me Crypto
                 </h5>
 
                 <p class="small tagline">
-                  Solana Open Source Portable Crypto Hardware Wallet &amp; Payment Printer With Optional Desktop/Mobile Exchange Soft Wallet App
+                  A platform for Creators to get sponsored by their fans using SOL tokens with one time and subscription based payments.
                 </p>
               </div>
             </figcaption>
@@ -1223,61 +929,8 @@ Transform this project into NFT art with ledger owners.
 
           <footer>
             <div class="small members ">
-      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/engelking-ray"><img alt="Ray Engelking" class="user-photo photo_image image-replacement" title="engelking-ray" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="//challengepost-s3-challengepost.netdna-ssl.com/photos/production/user_photos/001/694/801/datas/small.png" /></span>
-
-  
-</div>
-
-
-            <div class="counts">
-  <span class="count like-count" data-count="like">
-    <i class="ss-icon ss-heart"></i>
-    2
-  </span>
-
-  <span class="count comment-count" data-count="comment">
-    <i class="ss-icon ss-chat"></i>
-    0
-  </span>
-</div>
-
-          </footer>
-
-        
-</div></a>  </div>
-
-    <div class="columns"></div>
-  </div>
-  <div class="row">
-      
-  <div class="large-4 small-12 columns gallery-item" data-software-id="392508">
-    <a class="block-wrapper-link fade link-to-software" href="https://devpost.com/software/kong-protocol">
-      <div class="software-entry gallery-entry fade visible" id="software_392508">
-          <figure>
-            <img alt="Kong Protocol" class="software_thumbnail_image image-replacement" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif&#39;;" src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_thumbnail_photos/001/694/777/datas/medium.jpeg" />
-            
-            <figcaption>
-              <div class="software-entry-name entry-body">
-                
-                <h5>
-                  Kong Protocol
-                </h5>
-
-                <p class="small tagline">
-                  Simple loans on SOL with USD stable coin. Zero interest. Zero risk of liquidation.
-Kong token holders stabilize USD token and earn interest on loans.
-                </p>
-              </div>
-            </figcaption>
-          </figure>
-
-
-
-         <!-- cache end -->
-
-          <footer>
-            <div class="small members ">
-      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/kongprotocol"><img alt="Kong Protocol" class="user-photo photo_image image-replacement" title="kongprotocol" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="//challengepost-s3-challengepost.netdna-ssl.com/photos/production/user_photos/001/695/240/datas/small.jpeg" /></span>
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/baymac"><img alt="Parichay Barpanda" class="user-photo facebook_avatar_image image-replacement" title="baymac" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://avatars.githubusercontent.com/u/23079344?type=square&amp;v=4" /></span>
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/IshaanDesai45"><img alt="IshaanDesai45 Desai" class="user-photo facebook_avatar_image image-replacement" title="IshaanDesai45" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://avatars.githubusercontent.com/u/46575231?type=square&amp;v=4" /></span>
 
   
 </div>
@@ -1300,21 +953,77 @@ Kong token holders stabilize USD token and earn interest on loans.
         
 </div></a>  </div>
 
-  <div class="large-4 small-12 columns gallery-item" data-software-id="388084">
-    <a class="block-wrapper-link fade link-to-software" href="https://devpost.com/software/lords">
-      <div class="software-entry gallery-entry fade visible" id="software_388084">
+    <div class="columns"></div>
+  </div>
+  <div class="row">
+      
+  <div class="large-4 small-12 columns gallery-item" data-software-id="383451">
+    <a class="block-wrapper-link fade link-to-software" href="https://devpost.com/software/solhunt">
+      <div class="software-entry gallery-entry fade visible" id="software_383451">
           <figure>
-            <img alt="Lords" class="software_thumbnail_image image-replacement" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif&#39;;" src="https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif" />
+            <img alt="SOLHunt " class="software_thumbnail_image image-replacement" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif&#39;;" src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_thumbnail_photos/001/695/714/datas/medium.png" />
             
             <figcaption>
               <div class="software-entry-name entry-body">
                 
                 <h5>
-                  Lords
+                  SOLHunt 
                 </h5>
 
                 <p class="small tagline">
-                  Lords is a medieval MMORPG with player-generated uniqueness and deep socioeconomic interactions.
+                  Pixel Dungeon RPG multi-character game on Solana, with NFT Metaverse, token DEX, governance &amp; real rewards. Collect loots, beat monsters, NFT reward &amp; mint/buy/sell NFTs characters &amp; use them in game.
+                </p>
+              </div>
+            </figcaption>
+          </figure>
+
+
+
+         <!-- cache end -->
+
+          <footer>
+            <div class="small members member-overflow">
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/lopeselio"><img alt="Elio Jordan Lopes" class="user-photo photo_image image-replacement" title="lopeselio" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="//challengepost-s3-challengepost.netdna-ssl.com/photos/production/user_photos/001/497/904/datas/small.jpg" /></span>
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/sagarbehara13"><img alt="Sagar Behara" class="user-photo facebook_avatar_image image-replacement" title="sagarbehara13" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://lh6.googleusercontent.com/-JIzmgXZ1Nl4/AAAAAAAAAAI/AAAAAAAAAAA/AKF05nDwhOjV4OSWQzzq-Xrh9w4akEaQsA/c/photo.jpg?type=square" /></span>
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/ashik9591"><img alt="Ashik Meerankutty" class="user-photo facebook_avatar_image image-replacement" title="ashik9591" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://lh3.googleusercontent.com/a-/AOh14Gg9lWeCTXfn-_-ReX4A7RaKo6CkrIsn_1RWswlBCg=s96-c?type=square" /></span>
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/shamin616"><img alt="Shamin Meerankutty" class="user-photo facebook_avatar_image image-replacement" title="shamin616" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://lh3.googleusercontent.com/a-/AOh14Ghzcxvrc0M3CwX8UXxCZhd4qBc5poBgXqY4qQqxhQ=s96-c?type=square" /></span>
+
+  + 1
+</div>
+
+
+            <div class="counts">
+  <span class="count like-count" data-count="like">
+    <i class="ss-icon ss-heart"></i>
+    42
+  </span>
+
+  <span class="count comment-count" data-count="comment">
+    <i class="ss-icon ss-chat"></i>
+    10
+  </span>
+</div>
+
+          </footer>
+
+        
+</div></a>  </div>
+
+  <div class="large-4 small-12 columns gallery-item" data-software-id="383712">
+    <a class="block-wrapper-link fade link-to-software" href="https://devpost.com/software/wodger-decentralised-inventory-management-system">
+      <div class="software-entry gallery-entry fade visible" id="software_383712">
+          <figure>
+            <img alt="Wodger-Decentralised Inventory Management System " class="software_thumbnail_image image-replacement" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif&#39;;" src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/665/034/datas/medium.jpg" />
+            
+            <figcaption>
+              <div class="software-entry-name entry-body">
+                
+                <h5>
+                  Wodger-Decentralised Inventory Management System 
+                </h5>
+
+                <p class="small tagline">
+                  My project helps in providing privacy to sensitive data through the utlisation of the ethereum distrubuted ledger to solve the data privacy problems on the blockchain 
                 </p>
               </div>
             </figcaption>
@@ -1326,8 +1035,111 @@ Kong token holders stabilize USD token and earn interest on loans.
 
           <footer>
             <div class="small members ">
-      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/CaronSch"><img alt="Caron Schaller" class="user-photo facebook_avatar_image image-replacement" title="CaronSch" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://avatars.githubusercontent.com/u/72612765?type=square&amp;v=4" /></span>
-      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/alex-viets"><img alt="Alex Viets" class="user-photo facebook_avatar_image image-replacement" title="alex-viets" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://lh3.googleusercontent.com/a/AATXAJxkz4rI9feLLNsuXdcrUkYMDmnHGaHjH2dukeRc=s96-c?type=square" /></span>
+    <img class="user-photo" title="" alt="" src="https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-25-272b4f225e6e54b2ac0c1ac6468649c3.png" />
+
+  
+</div>
+
+
+            <div class="counts">
+  <span class="count like-count" data-count="like">
+    <i class="ss-icon ss-heart"></i>
+    0
+  </span>
+
+  <span class="count comment-count" data-count="comment">
+    <i class="ss-icon ss-chat"></i>
+    0
+  </span>
+</div>
+
+          </footer>
+
+        
+</div></a>  </div>
+
+  <div class="large-4 small-12 columns gallery-item" data-software-id="383727">
+    <a class="block-wrapper-link fade link-to-software" href="https://devpost.com/software/dbricks-xyz">
+      <div class="software-entry gallery-entry fade visible" id="software_383727">
+          <figure>
+            <img alt="dbricks.xyz" class="software_thumbnail_image image-replacement" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif&#39;;" src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/696/241/datas/medium.png" />
+            
+            <figcaption>
+              <div class="software-entry-name entry-body">
+                
+                <h5>
+                  dbricks.xyz
+                </h5>
+
+                <p class="small tagline">
+                  Ultimate Solana protocol composer. Place a Serum trade, enter into a Mango perp, and deposit into Saber - all in a single transaction.
+                </p>
+              </div>
+            </figcaption>
+          </figure>
+
+
+
+         <!-- cache end -->
+
+          <footer>
+            <div class="small members ">
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/iljamoi"><img alt="Ilja Moisejevs" class="user-photo photo_image image-replacement" title="iljamoi" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="//challengepost-s3-challengepost.netdna-ssl.com/photos/production/user_photos/001/645/469/datas/small.png" /></span>
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/dboures"><img alt="Dean Boures" class="user-photo facebook_avatar_image image-replacement" title="dboures" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://avatars.githubusercontent.com/u/24765307?type=square&amp;v=4" /></span>
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/dogetoshibakamoto"><img alt="dogetoshi bakamoto" class="user-photo gravatar_image image-replacement" title="dogetoshibakamoto" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://www.gravatar.com/avatar/319ad92a222527b834e7e9d69702dfff?d=https%3A%2F%2Fdevpost-challengepost.netdna-ssl.com%2Fassets%2Fdefaults%2Fno-avatar-25.png&amp;s=25" /></span>
+
+  
+</div>
+
+
+            <div class="counts">
+  <span class="count like-count" data-count="like">
+    <i class="ss-icon ss-heart"></i>
+    31
+  </span>
+
+  <span class="count comment-count" data-count="comment">
+    <i class="ss-icon ss-chat"></i>
+    5
+  </span>
+</div>
+
+          </footer>
+
+        
+</div></a>  </div>
+
+    <div class="columns"></div>
+  </div>
+  <div class="row">
+      
+  <div class="large-4 small-12 columns gallery-item" data-software-id="383750">
+    <a class="block-wrapper-link fade link-to-software" href="https://devpost.com/software/zoints">
+      <div class="software-entry gallery-entry fade visible" id="software_383750">
+          <figure>
+            <img alt="Zoints" class="software_thumbnail_image image-replacement" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif&#39;;" src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_thumbnail_photos/001/665/199/datas/medium.png" />
+            
+            <figcaption>
+              <div class="software-entry-name entry-body">
+                
+                <h5>
+                  Zoints
+                </h5>
+
+                <p class="small tagline">
+                  Zoints is a Social and Community Network with recurring income via split staking rewards.  We also like the NFT.
+                </p>
+              </div>
+            </figcaption>
+          </figure>
+
+
+
+         <!-- cache end -->
+
+          <footer>
+            <div class="small members ">
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/dnchapman77"><img alt="David CHAPMAN" class="user-photo facebook_avatar_image image-replacement" title="dnchapman77" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://media.licdn.com/dms/image/C4E03AQHPZq9bABmAAg/profile-displayphoto-shrink_800_800/0?e=1557964800&amp;t=8_KKuc8yoLWVFZ4vrfWspd7NtSF0FX8QWWzjAfdoOiQ&amp;type=square&amp;v=beta" /></span>
 
   
 </div>
@@ -1350,21 +1162,22 @@ Kong token holders stabilize USD token and earn interest on loans.
         
 </div></a>  </div>
 
-  <div class="large-4 small-12 columns gallery-item" data-software-id="381809">
-    <a class="block-wrapper-link fade link-to-software" href="https://devpost.com/software/modular">
-      <div class="software-entry gallery-entry fade visible" id="software_381809">
+  <div class="large-4 small-12 columns gallery-item" data-software-id="383788">
+    <a class="block-wrapper-link fade link-to-software" href="https://devpost.com/software/nftmagic-nft-marketplace-for-everyone">
+      <div class="software-entry gallery-entry fade visible" id="software_383788">
           <figure>
-            <img alt="Modular" class="software_thumbnail_image image-replacement" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif&#39;;" src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_thumbnail_photos/001/693/290/datas/medium.jpg" />
+            <img alt="NftMagic - NFT Marketplace for Everyone!" class="software_thumbnail_image image-replacement" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif&#39;;" src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_thumbnail_photos/001/665/386/datas/medium.png" />
             
             <figcaption>
               <div class="software-entry-name entry-body">
                 
                 <h5>
-                  Modular
+                  NftMagic - NFT Marketplace for Everyone!
                 </h5>
 
                 <p class="small tagline">
-                  An open NFT resource and crafting system primitive.
+                  NFT Marketplace for Everyone!
+Our purpose is to make the NFT market as simple as possible for everyone. You do not need to have knowledge of blockchain and cryptocurrency.
                 </p>
               </div>
             </figcaption>
@@ -1376,8 +1189,8 @@ Kong token holders stabilize USD token and earn interest on loans.
 
           <footer>
             <div class="small members ">
-      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/lui-kohl"><img alt="Lui Kohl" class="user-photo facebook_avatar_image image-replacement" title="lui-kohl" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://lh3.googleusercontent.com/a-/AOh14GinLsXfSUJifp71xbYGQWZqqR1kW9H75-yXvO-vAUk=s96-c?type=square" /></span>
-      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/CamdenClark"><img alt="Camden Clark" class="user-photo facebook_avatar_image image-replacement" title="CamdenClark" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://avatars.githubusercontent.com/u/11891578?type=square&amp;v=4" /></span>
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/info68"><img alt="hubsocial info" class="user-photo facebook_avatar_image image-replacement" title="info68" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://lh3.googleusercontent.com/a/AATXAJymCxRqdj_6qjrDjHx3XwrmJEqjD1d3WuETMFhN=s96-c?type=square" /></span>
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/hubsocialvn"><img alt="vn hubsocial" class="user-photo facebook_avatar_image image-replacement" title="hubsocialvn" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://lh3.googleusercontent.com/a/AATXAJzuIwoaguuMuThqjFUxAmboq6sLgtjvOjAS09uA=s96-c?type=square" /></span>
 
   
 </div>
@@ -1391,59 +1204,6 @@ Kong token holders stabilize USD token and earn interest on loans.
 
   <span class="count comment-count" data-count="comment">
     <i class="ss-icon ss-chat"></i>
-    1
-  </span>
-</div>
-
-          </footer>
-
-        
-</div></a>  </div>
-
-    <div class="columns"></div>
-  </div>
-  <div class="row">
-      
-  <div class="large-4 small-12 columns gallery-item" data-software-id="377119">
-    <a class="block-wrapper-link fade link-to-software" href="https://devpost.com/software/moment-of-excitement">
-      <div class="software-entry gallery-entry fade visible" id="software_377119">
-          <figure>
-            <img alt="Moment of Excitement " class="software_thumbnail_image image-replacement" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif&#39;;" src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_thumbnail_photos/001/642/001/datas/medium.jpg" />
-            
-            <figcaption>
-              <div class="software-entry-name entry-body">
-                
-                <h5>
-                  Moment of Excitement 
-                </h5>
-
-                <p class="small tagline">
-                  Abstract of a boy who was searching for something new for the human world. Everyone tends to check for something that we haven’t seen before, he is also an enthusiast who finally found something new.
-                </p>
-              </div>
-            </figcaption>
-          </figure>
-
-
-
-         <!-- cache end -->
-
-          <footer>
-            <div class="small members ">
-      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/joshk-jayan"><img alt="Josh K Jayan" class="user-photo gravatar_image image-replacement" title="joshk-jayan" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://www.gravatar.com/avatar/eef1cf9609e0cd2fe8c27182a8236ed6?d=https%3A%2F%2Fdevpost-challengepost.netdna-ssl.com%2Fassets%2Fdefaults%2Fno-avatar-25.png&amp;s=25" /></span>
-
-  
-</div>
-
-
-            <div class="counts">
-  <span class="count like-count" data-count="like">
-    <i class="ss-icon ss-heart"></i>
-    1
-  </span>
-
-  <span class="count comment-count" data-count="comment">
-    <i class="ss-icon ss-chat"></i>
     0
   </span>
 </div>
@@ -1453,21 +1213,21 @@ Kong token holders stabilize USD token and earn interest on loans.
         
 </div></a>  </div>
 
-  <div class="large-4 small-12 columns gallery-item" data-software-id="376954">
-    <a class="block-wrapper-link fade link-to-software" href="https://devpost.com/software/monaco">
-      <div class="software-entry gallery-entry fade visible" id="software_376954">
+  <div class="large-4 small-12 columns gallery-item" data-software-id="383840">
+    <a class="block-wrapper-link fade link-to-software" href="https://devpost.com/software/all-about-fees">
+      <div class="software-entry gallery-entry fade visible" id="software_383840">
           <figure>
-            <img alt="Monaco" class="software_thumbnail_image image-replacement" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif&#39;;" src="https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif" />
+            <img alt="All About Fees" class="software_thumbnail_image image-replacement" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif&#39;;" src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/691/690/datas/medium.png" />
             
             <figcaption>
               <div class="software-entry-name entry-body">
                 
                 <h5>
-                  Monaco
+                  All About Fees
                 </h5>
 
                 <p class="small tagline">
-                  A simple DCA protocol built on top of Serum and any program that implements the instruction interface from the spl token-lending program.
+                  In the current environment when trading BTC, ETH transaction fees can play a big role in decision making. Project highlights how much user would save money on fees by switching to Solana network
                 </p>
               </div>
             </figcaption>
@@ -1479,7 +1239,7 @@ Kong token holders stabilize USD token and earn interest on loans.
 
           <footer>
             <div class="small members ">
-      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/RohanKapurDEV"><img alt="Rohan Kapur" class="user-photo facebook_avatar_image image-replacement" title="RohanKapurDEV" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://avatars.githubusercontent.com/u/40466549?type=square&amp;v=4" /></span>
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/michal-klik"><img alt="Michal Klik" class="user-photo facebook_avatar_image image-replacement" title="michal-klik" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://lh3.googleusercontent.com/a/AATXAJwkRll17mzelRoOtP-A42rDcxWLDrczft6oo8L8oYA=s96-c?type=square" /></span>
 
   
 </div>
@@ -1488,56 +1248,7 @@ Kong token holders stabilize USD token and earn interest on loans.
             <div class="counts">
   <span class="count like-count" data-count="like">
     <i class="ss-icon ss-heart"></i>
-    1
-  </span>
-
-  <span class="count comment-count" data-count="comment">
-    <i class="ss-icon ss-chat"></i>
-    0
-  </span>
-</div>
-
-          </footer>
-
-        
-</div></a>  </div>
-
-  <div class="large-4 small-12 columns gallery-item" data-software-id="385422">
-    <a class="block-wrapper-link fade link-to-software" href="https://devpost.com/software/ttdao">
-      <div class="software-entry gallery-entry fade visible" id="software_385422">
-          <figure>
-            <img alt="Monad" class="software_thumbnail_image image-replacement" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif&#39;;" src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_thumbnail_photos/001/697/203/datas/medium.png" />
-            
-            <figcaption>
-              <div class="software-entry-name entry-body">
-                
-                <h5>
-                  Monad
-                </h5>
-
-                <p class="small tagline">
-                  Monad is an on-chain decentralized stablecoin backed by custodial stable assets and secured by a novel censorship-resistant governance mechanism, GottfriedDAO. 
-                </p>
-              </div>
-            </figcaption>
-          </figure>
-
-
-
-         <!-- cache end -->
-
-          <footer>
-            <div class="small members ">
-      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/daanishkhazi"><img alt="Daanish Khazi" class="user-photo facebook_avatar_image image-replacement" title="daanishkhazi" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://avatars0.githubusercontent.com/u/20449808?type=square&amp;v=4" /></span>
-
-  
-</div>
-
-
-            <div class="counts">
-  <span class="count like-count" data-count="like">
-    <i class="ss-icon ss-heart"></i>
-    3
+    2
   </span>
 
   <span class="count comment-count" data-count="comment">
@@ -1555,21 +1266,21 @@ Kong token holders stabilize USD token and earn interest on loans.
   </div>
   <div class="row">
       
-  <div class="large-4 small-12 columns gallery-item" data-software-id="393576">
-    <a class="block-wrapper-link fade link-to-software" href="https://devpost.com/software/moneystream-6ikt9l">
-      <div class="software-entry gallery-entry fade visible" id="software_393576">
+  <div class="large-4 small-12 columns gallery-item" data-software-id="383845">
+    <a class="block-wrapper-link fade link-to-software" href="https://devpost.com/software/work-token">
+      <div class="software-entry gallery-entry fade visible" id="software_383845">
           <figure>
-            <img alt="MoneyStream" class="software_thumbnail_image image-replacement" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif&#39;;" src="https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif" />
+            <img alt="Work Token" class="software_thumbnail_image image-replacement" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif&#39;;" src="https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif" />
             
             <figcaption>
               <div class="software-entry-name entry-body">
                 
                 <h5>
-                  MoneyStream
+                  Work Token
                 </h5>
 
                 <p class="small tagline">
-                  Send money over time
+                  A token that can only be minted through real work(out) in real life, and can only be traded/consumed in a blockchain based ecosystem/game. The perfect token for healthy games.
                 </p>
               </div>
             </figcaption>
@@ -1581,7 +1292,7 @@ Kong token holders stabilize USD token and earn interest on loans.
 
           <footer>
             <div class="small members ">
-      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/ibrica"><img alt="Ivan Britvic" class="user-photo facebook_avatar_image image-replacement" title="ibrica" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://avatars.githubusercontent.com/u/514613?type=square&amp;v=4" /></span>
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/laurentHYZ"><img alt="laurent pinson" class="user-photo facebook_avatar_image image-replacement" title="laurentHYZ" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://avatars.githubusercontent.com/u/7548124?type=square&amp;v=4" /></span>
 
   
 </div>
@@ -1604,22 +1315,21 @@ Kong token holders stabilize USD token and earn interest on loans.
         
 </div></a>  </div>
 
-  <div class="large-4 small-12 columns gallery-item" data-software-id="392941">
-    <a class="block-wrapper-link fade link-to-software" href="https://devpost.com/software/monkeygame-xyz">
-      <div class="software-entry gallery-entry fade visible" id="software_392941">
+  <div class="large-4 small-12 columns gallery-item" data-software-id="383860">
+    <a class="block-wrapper-link fade link-to-software" href="https://devpost.com/software/nusic-fantasy-record-label">
+      <div class="software-entry gallery-entry fade visible" id="software_383860">
           <figure>
-            <img alt="monkeygame.xyz" class="software_thumbnail_image image-replacement" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif&#39;;" src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_thumbnail_photos/001/697/697/datas/medium.png" />
+            <img alt="NUSIC: Prediction markets" class="software_thumbnail_image image-replacement" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif&#39;;" src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/698/419/datas/medium.png" />
             
             <figcaption>
               <div class="software-entry-name entry-body">
                 
                 <h5>
-                  monkeygame.xyz
+                  NUSIC: Prediction markets
                 </h5>
 
                 <p class="small tagline">
-                  monkeygame.xyz is a game played fully on-chain and outside of the control of its creators.
-the sale of only a 1000 NFTs contribute to a prize pool that is awarded to the last player standing.
+                  NFT Music prediction markets. Test your convictions on the latest NFT music.
                 </p>
               </div>
             </figcaption>
@@ -1631,7 +1341,58 @@ the sale of only a 1000 NFTs contribute to a prize pool that is awarded to the l
 
           <footer>
             <div class="small members ">
-      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/monkeygame-xyz"><img alt="monkey game" class="user-photo facebook_avatar_image image-replacement" title="monkeygame-xyz" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://lh3.googleusercontent.com/a/AATXAJyYa9D1-Ap6Ksrm8DKjlSrdvpHYt2QlS6Edk0s=s96-c?type=square" /></span>
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/adamnusic"><img alt="adamnusic Place" class="user-photo facebook_avatar_image image-replacement" title="adamnusic" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://avatars.githubusercontent.com/u/75082835?type=square&amp;v=4" /></span>
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/logesh665"><img alt="Logesh Rajappa" class="user-photo facebook_avatar_image image-replacement" title="logesh665" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://lh3.googleusercontent.com/a/AATXAJwdNBAuDDMke4fRVINF3dTGSMWt9wY6Pmp2oKMr=s96-c?type=square" /></span>
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/richard-fintech"><img alt="Richard Brownstein" class="user-photo photo_image image-replacement" title="richard-fintech" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="//challengepost-s3-challengepost.netdna-ssl.com/photos/production/user_photos/001/681/387/datas/small.jpg" /></span>
+
+  
+</div>
+
+
+            <div class="counts">
+  <span class="count like-count" data-count="like">
+    <i class="ss-icon ss-heart"></i>
+    5
+  </span>
+
+  <span class="count comment-count" data-count="comment">
+    <i class="ss-icon ss-chat"></i>
+    0
+  </span>
+</div>
+
+          </footer>
+
+        
+</div></a>  </div>
+
+  <div class="large-4 small-12 columns gallery-item" data-software-id="383864">
+    <a class="block-wrapper-link fade link-to-software" href="https://devpost.com/software/difinance">
+      <div class="software-entry gallery-entry fade visible" id="software_383864">
+          <figure>
+            <img alt="DiFiBridge " class="software_thumbnail_image image-replacement" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif&#39;;" src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_thumbnail_photos/001/693/652/datas/medium.png" />
+            
+            <figcaption>
+              <div class="software-entry-name entry-body">
+                
+                <h5>
+                  DiFiBridge 
+                </h5>
+
+                <p class="small tagline">
+                  A traditional banking software that runs on the private chain. The account owners on this system will automatically own a Difi account via a bridge. Paving the path to own digital assets on the chain.
+                </p>
+              </div>
+            </figcaption>
+          </figure>
+
+
+
+         <!-- cache end -->
+
+          <footer>
+            <div class="small members ">
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/anand-bhalve"><img alt="Anand Bhalve" class="user-photo facebook_avatar_image image-replacement" title="anand-bhalve" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://media-exp1.licdn.com/dms/image/C4E03AQEEbfoJnXaxng/profile-displayphoto-shrink_800_800/0/1516235471202?e=1637798400&amp;t=g2a6sVJ68UbQaGtRs_P2CLKQcLP6Y_xTgSkUZ2C2B64&amp;type=square&amp;v=beta" /></span>
 
   
 </div>
@@ -1654,21 +1415,25 @@ the sale of only a 1000 NFTs contribute to a prize pool that is awarded to the l
         
 </div></a>  </div>
 
-  <div class="large-4 small-12 columns gallery-item" data-software-id="379281">
-    <a class="block-wrapper-link fade link-to-software" href="https://devpost.com/software/monster-cq8y9m">
-      <div class="software-entry gallery-entry fade visible" id="software_379281">
+    <div class="columns"></div>
+  </div>
+  <div class="row">
+      
+  <div class="large-4 small-12 columns gallery-item" data-software-id="383895">
+    <a class="block-wrapper-link fade link-to-software" href="https://devpost.com/software/vovo-finance">
+      <div class="software-entry gallery-entry fade visible" id="software_383895">
           <figure>
-            <img alt="MonsterX" class="software_thumbnail_image image-replacement" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif&#39;;" src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_thumbnail_photos/001/687/888/datas/medium.png" />
+            <img alt="Vovo Finance" class="software_thumbnail_image image-replacement" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif&#39;;" src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_thumbnail_photos/001/665/698/datas/medium.png" />
             
             <figcaption>
               <div class="software-entry-name entry-body">
                 
                 <h5>
-                  MonsterX
+                  Vovo Finance
                 </h5>
 
                 <p class="small tagline">
-                  Built on Solana, MonsterX is an NFT-commerce platform, integrating physical commodities and standardizing secured transactions with NFT technology for the global resale and collectibles market. 
+                  Grow your crypto with customizable yield via Solana&#39;s first structured products protocol 
                 </p>
               </div>
             </figcaption>
@@ -1680,10 +1445,7 @@ the sale of only a 1000 NFTs contribute to a prize pool that is awarded to the l
 
           <footer>
             <div class="small members ">
-      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/intoxicated-coin"><img alt="Brian C." class="user-photo facebook_avatar_image image-replacement" title="intoxicated-coin" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://avatars.githubusercontent.com/u/85433064?type=square&amp;v=4" /></span>
-      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/adoniswan"><img alt="Wesley K" class="user-photo photo_image image-replacement" title="adoniswan" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="//challengepost-s3-challengepost.netdna-ssl.com/photos/production/user_photos/001/696/471/datas/small.jpg" /></span>
-      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/jobmoo61"><img alt="Hans L" class="user-photo photo_image image-replacement" title="jobmoo61" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="//challengepost-s3-challengepost.netdna-ssl.com/photos/production/user_photos/001/696/476/datas/small.png" /></span>
-      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/stfff99"><img alt="JaeHoon Ahn" class="user-photo facebook_avatar_image image-replacement" title="stfff99" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://lh3.googleusercontent.com/a/AATXAJyX9mFKYCB4pIQvP3BMZgTcnGlrsalQeFIEgRbS=s96-c?type=square" /></span>
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/leo12026"><img alt="leo12026 z" class="user-photo facebook_avatar_image image-replacement" title="leo12026" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://avatars.githubusercontent.com/u/85875472?type=square&amp;v=4" /></span>
 
   
 </div>
@@ -1692,12 +1454,268 @@ the sale of only a 1000 NFTs contribute to a prize pool that is awarded to the l
             <div class="counts">
   <span class="count like-count" data-count="like">
     <i class="ss-icon ss-heart"></i>
-    22
+    1
   </span>
 
   <span class="count comment-count" data-count="comment">
     <i class="ss-icon ss-chat"></i>
-    6
+    0
+  </span>
+</div>
+
+          </footer>
+
+        
+</div></a>  </div>
+
+  <div class="large-4 small-12 columns gallery-item" data-software-id="383899">
+    <a class="block-wrapper-link fade link-to-software" href="https://devpost.com/software/onboard-ft8c49">
+      <div class="software-entry gallery-entry fade visible" id="software_383899">
+          <figure>
+            <img alt="Chess Mafia" class="software_thumbnail_image image-replacement" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif&#39;;" src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/697/187/datas/medium.png" />
+            
+            <figcaption>
+              <div class="software-entry-name entry-body">
+                
+                <h5>
+                  Chess Mafia
+                </h5>
+
+                <p class="small tagline">
+                  Play Chess on Solana for Sol.
+                </p>
+              </div>
+            </figcaption>
+          </figure>
+
+
+
+         <!-- cache end -->
+
+          <footer>
+            <div class="small members ">
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/nicole-s-maffeo"><img alt="Nicole Maffeo" class="user-photo facebook_avatar_image image-replacement" title="nicole-s-maffeo" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://media-exp1.licdn.com/dms/image/C4D03AQHRnOslMvEhjA/profile-displayphoto-shrink_800_800/0/1523317794344?e=1637798400&amp;t=HqWrWWxymIvf12NLrF0wFp8R0jq8nyzt8944puSDfhw&amp;type=square&amp;v=beta" /></span>
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/Seranged"><img alt="Seranged" class="user-photo facebook_avatar_image image-replacement" title="Seranged" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://avatars.githubusercontent.com/u/80223622?type=square&amp;v=4" /></span>
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/maxtbosch"><img alt="Max Bosch" class="user-photo facebook_avatar_image image-replacement" title="maxtbosch" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://lh3.googleusercontent.com/a-/AOh14Gjso_LIpDAuOxk1TzBUbmN7s8WymgKyHwiRcPGuEg=s96-c?type=square" /></span>
+
+  
+</div>
+
+
+            <div class="counts">
+  <span class="count like-count" data-count="like">
+    <i class="ss-icon ss-heart"></i>
+    4
+  </span>
+
+  <span class="count comment-count" data-count="comment">
+    <i class="ss-icon ss-chat"></i>
+    0
+  </span>
+</div>
+
+          </footer>
+
+        
+</div></a>  </div>
+
+  <div class="large-4 small-12 columns gallery-item" data-software-id="383922">
+    <a class="block-wrapper-link fade link-to-software" href="https://devpost.com/software/swapify-tfvp9b">
+      <div class="software-entry gallery-entry fade visible" id="software_383922">
+          <figure>
+            <img alt="Swapify" class="software_thumbnail_image image-replacement" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif&#39;;" src="https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif" />
+            
+            <figcaption>
+              <div class="software-entry-name entry-body">
+                
+                <h5>
+                  Swapify
+                </h5>
+
+                <p class="small tagline">
+                  A location-based NFT trading app.
+                </p>
+              </div>
+            </figcaption>
+          </figure>
+
+
+
+         <!-- cache end -->
+
+          <footer>
+            <div class="small members ">
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/cory-farinella"><img alt="Cory Farinella" class="user-photo facebook_avatar_image image-replacement" title="cory-farinella" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://lh3.googleusercontent.com/a-/AOh14Gjb8rdF16Hsgmr-pKDFDwKLrb5vOfiF8PAxNIFS=s96-c?type=square" /></span>
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/mwilder"><img alt="Maura Wilder" class="user-photo gravatar_image image-replacement" title="mwilder" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://www.gravatar.com/avatar/a484be3f0a9638635df60c707cdcc8e9?d=https%3A%2F%2Fdevpost-challengepost.netdna-ssl.com%2Fassets%2Fdefaults%2Fno-avatar-25.png&amp;s=25" /></span>
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/abellusc-poloniex"><img alt="abellusc-poloniex" class="user-photo facebook_avatar_image image-replacement" title="abellusc-poloniex" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://avatars.githubusercontent.com/u/87447480?type=square&amp;v=4" /></span>
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/rafael-maki"><img alt="Rafael Maki" class="user-photo gravatar_image image-replacement" title="rafael-maki" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://www.gravatar.com/avatar/f8c2ede56096e6043e066e7a23a50312?d=https%3A%2F%2Fdevpost-challengepost.netdna-ssl.com%2Fassets%2Fdefaults%2Fno-avatar-25.png&amp;s=25" /></span>
+
+  
+</div>
+
+
+            <div class="counts">
+  <span class="count like-count" data-count="like">
+    <i class="ss-icon ss-heart"></i>
+    0
+  </span>
+
+  <span class="count comment-count" data-count="comment">
+    <i class="ss-icon ss-chat"></i>
+    0
+  </span>
+</div>
+
+          </footer>
+
+        
+</div></a>  </div>
+
+    <div class="columns"></div>
+  </div>
+  <div class="row">
+      
+  <div class="large-4 small-12 columns gallery-item" data-software-id="383960">
+    <a class="block-wrapper-link fade link-to-software" href="https://devpost.com/software/besplatno-kz">
+      <div class="software-entry gallery-entry fade visible" id="software_383960">
+          <figure>
+            <img alt="BESPLATNO.KZ" class="software_thumbnail_image image-replacement" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif&#39;;" src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/682/503/datas/medium.jpg" />
+            
+            <figcaption>
+              <div class="software-entry-name entry-body">
+                
+                <h5>
+                  BESPLATNO.KZ
+                </h5>
+
+                <p class="small tagline">
+                  Besplatno.kz is an online service that provides all goods and services for free in exchange for Targeted Actions that are gamified.
+                </p>
+              </div>
+            </figcaption>
+          </figure>
+
+
+
+         <!-- cache end -->
+
+          <footer>
+            <div class="small members ">
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/makeev-tima"><img alt="Timur Makeev" class="user-photo photo_image image-replacement" title="makeev-tima" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="//challengepost-s3-challengepost.netdna-ssl.com/photos/production/user_photos/001/683/524/datas/small.jpg" /></span>
+
+  
+</div>
+
+
+            <div class="counts">
+  <span class="count like-count" data-count="like">
+    <i class="ss-icon ss-heart"></i>
+    2
+  </span>
+
+  <span class="count comment-count" data-count="comment">
+    <i class="ss-icon ss-chat"></i>
+    0
+  </span>
+</div>
+
+          </footer>
+
+        
+</div></a>  </div>
+
+  <div class="large-4 small-12 columns gallery-item" data-software-id="383987">
+    <a class="block-wrapper-link fade link-to-software" href="https://devpost.com/software/hedge-ptdjgs">
+      <div class="software-entry gallery-entry fade visible" id="software_383987">
+          <figure>
+            <img alt="Hedge Finance " class="software_thumbnail_image image-replacement" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif&#39;;" src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/694/374/datas/medium.png" />
+            
+            <figcaption>
+              <div class="software-entry-name entry-body">
+                
+                <h5>
+                  Hedge Finance 
+                </h5>
+
+                <p class="small tagline">
+                  Hedge leverages Solana&#39;s speed to enable 0% interest, low collateral ratio borrowing against SOL. It features a yield generating pool that performs best in down or neutral market conditions.
+                </p>
+              </div>
+            </figcaption>
+          </figure>
+
+
+
+         <!-- cache end -->
+
+          <footer>
+            <div class="small members ">
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/sg3510"><img alt="Seb Grubb" class="user-photo facebook_avatar_image image-replacement" title="sg3510" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://avatars.githubusercontent.com/u/4375826?type=square&amp;v=4" /></span>
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/coudron"><img alt="Chris Coudron" class="user-photo facebook_avatar_image image-replacement" title="coudron" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://avatars.githubusercontent.com/u/374048?type=square&amp;v=4" /></span>
+
+  
+</div>
+
+
+            <div class="counts">
+  <span class="count like-count" data-count="like">
+    <i class="ss-icon ss-heart"></i>
+    15
+  </span>
+
+  <span class="count comment-count" data-count="comment">
+    <i class="ss-icon ss-chat"></i>
+    1
+  </span>
+</div>
+
+          </footer>
+
+        
+</div></a>  </div>
+
+  <div class="large-4 small-12 columns gallery-item" data-software-id="383997">
+    <a class="block-wrapper-link fade link-to-software" href="https://devpost.com/software/anti-artist-artist-s-club">
+      <div class="software-entry gallery-entry fade visible" id="software_383997">
+          <figure>
+            <img alt="Anti Artist  Club" class="software_thumbnail_image image-replacement" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/thumbnail-placeholder-42bcab8d8178b413922ae2877d8b0868.gif&#39;;" src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/674/389/datas/medium.gif" />
+            
+            <figcaption>
+              <div class="software-entry-name entry-body">
+                
+                <h5>
+                  Anti Artist  Club
+                </h5>
+
+                <p class="small tagline">
+                  We are building the next big music community for metaverse concerts on the Solana Network. The Anti Artist Club is a statement of art, fashion, and music for Web 3.0. -Team Anti
+                </p>
+              </div>
+            </figcaption>
+          </figure>
+
+
+
+         <!-- cache end -->
+
+          <footer>
+            <div class="small members ">
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/charlessublette"><img alt="Charles Sublette" class="user-photo facebook_avatar_image image-replacement" title="charlessublette" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://media-exp1.licdn.com/dms/image/C4E03AQGAXXTzzkxkGg/profile-displayphoto-shrink_800_800/0/1623045218702?e=1637798400&amp;t=Z8nmpuxJlDb5MoOvuLe-97ZUDx-FBCSb_p7drvlHZJU&amp;type=square&amp;v=beta" /></span>
+      <span nested_link="true" class="user-profile-link" data-nested-link="true" data-url="https://devpost.com/UncaughtException"><img alt="Abrar Musa" class="user-photo gravatar_image image-replacement" title="UncaughtException" onerror="this.onerror=null;this.src=&#39;https://devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-100-17cf519ce6f8e4e0e83758ea09fc5eb3.png&#39;;" src="https://www.gravatar.com/avatar/49be1c933f15a9e7b96c6dd7f989eddd?d=https%3A%2F%2Fdevpost-challengepost.netdna-ssl.com%2Fassets%2Fdefaults%2Fno-avatar-25.png&amp;s=25" /></span>
+
+  
+</div>
+
+
+            <div class="counts">
+  <span class="count like-count" data-count="like">
+    <i class="ss-icon ss-heart"></i>
+    5
+  </span>
+
+  <span class="count comment-count" data-count="comment">
+    <i class="ss-icon ss-chat"></i>
+    2
   </span>
 </div>
 
@@ -1839,7 +1857,7 @@ the sale of only a 1000 NFTs contribute to a prize pool that is awarded to the l
 
     <script type="text/javascript" charset="utf-8">
   (function() {
-    mixpanel.identify("848fa4eef9f2b638ec9fff87410cf7ccda09646422ba7e6964a0d703d549ffe4f3988567942486de4760bd6350f49f730fbf");
+    mixpanel.identify("412c16b6ced8432a2ea544c8696ff07250ecccc10d587fcc64869dd9bb847962e38edc6ebaf9ef9072c7a0d100cd2d62c1a5");
     mixpanel.register({});
   })();
 </script>
